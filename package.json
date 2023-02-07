@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/somefood/node-study/issues"
   },
-  "homepage": "https://github.com/somefood/node-study#readme"
+  "homepage": "https://github.com/somefood/node-study#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
