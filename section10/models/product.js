@@ -13,11 +13,15 @@ module.exports = class Product {
   }
 
   save() {
-    
+    // ?를 활용해서 SQL 인젝션을 방지
+    return db.execute(
+      'INSERT INTO products (title, price, imageUrl, description) VALUES (?, ?, ?, ?)',
+      [this.title, this.price, this.imageUrl, this.description]
+    );
   }
 
   static deleteById(id) {
-    
+
   }
 
   static fetchAll() {
@@ -25,6 +29,6 @@ module.exports = class Product {
   }
 
   static findById(id) {
-    
+
   }
 };
